@@ -8,13 +8,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar"></nav>
-    <div class="image"></div>
-    <div class="form">
-        <div class="grid1"><p>halo</p></div>
-        <div class="grid2"><p>koko</p></div>
-        <div class="grid3"></div>
-        <div class="grid4"></div>
+    <div class="container">
+        <nav class="navbar"></nav>
+        <div class="image"></div>
+        <div class="form">
+            <form class="form-peminjaman" method="post">
+                <!-- @csrf -->
+                <div class="input-container">
+                    <label for="kelas">Kelas <span class="red-dot">*</span></label>
+                    <select name="kelas" id="kelas">
+                        <option disabled selected>Kelas</option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <label for="nama">Nama <span class="red-dot">*</span></label>
+                    <select name="nama" id="nama">
+                        <option disabled selected>Nama</option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <label for="tanggal">Tanggal Peminjaman <span class="red-dot">*</span></label>
+                    <input type="datetime-local" name="tanggal" id="tanggal">
+                </div>
+                <div class="input-container">
+                    <label for="nomor-laptop">Nomor Laptop <span class="red-dot">*</span></label>
+                    <select name="nomor-laptop" id="nomor-laptop">
+                        <option disabled selected>Nomor Laptop</option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <label for="nomor-laptop">Kelengkapan <span class="red-dot">*</span></label>
+                    <div class="checkbox-kelengkapan">
+                        <div class="tas">
+                            <span class="checkbox-title">Tas</span>
+                            <input type="checkbox" name="tas" id="tas">
+                        </div>
+                        <div class="mouse">
+                            <span class="checkbox-title">Mouse</span>
+                            <input type="checkbox" name="mouse" id="mouse">
+                        </div>
+                        <div class="charger">
+                            <span class="checkbox-title">Charger</span>
+                            <input type="checkbox" name="charger" id="">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
